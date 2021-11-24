@@ -6,12 +6,12 @@ import org.junit.jupiter.api.Test;
 
 public class DivisibleByFilterTest {
     Integer testnumber;
-    Integer divisor = 2;
+    Integer divisor = 3;
     boolean res;
     DivisibleByFilter filtro;
     @BeforeEach
     public void helper() {
-        testnumber = 9;
+        testnumber = 8;
         filtro = new DivisibleByFilter(divisor);
     }
     @Test

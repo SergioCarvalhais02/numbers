@@ -14,7 +14,7 @@ public class ListFiltererTest {
     List<Integer> expected;
     @BeforeEach
     public void helper() {
-        list = Arrays.asList(1,2,-2);
+        list = Arrays.asList(1,2,-4);
         expected = Arrays.asList(1,2);
     }
     @Test
@@ -22,7 +22,7 @@ public class ListFiltererTest {
         GenericListFilter stubfillter = Mockito.mock(GenericListFilter.class);
         Mockito.when(stubfillter.accept(1)).thenReturn(true);
         Mockito.when(stubfillter.accept(2)).thenReturn(true);
-        Mockito.when(stubfillter.accept(-2)).thenReturn(false);
+        Mockito.when(stubfillter.accept(-4)).thenReturn(false);
         GenericListFilter filter = new PositiveFilter();
         ListFilterer listfilter = new ListFilterer(filter);
         result = listfilter.filter(list,stubfillter);

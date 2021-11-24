@@ -31,7 +31,7 @@ public class ListDeduplicatorTest {
         Mockito.when(stubsort.sort()).thenReturn(Arrays.asList(1, 2, 2, 4, 5));
         //StubListSorter stubsort = new StubListSorter();
         ListDeduplicator deduplicated =  new ListDeduplicator();
-        List<Integer> res = deduplicated.deduplicate(list);
+        List<Integer> res = deduplicated.deduplicate(list, stubsort);
 
         Assertions.assertEquals(expected, res);
     }

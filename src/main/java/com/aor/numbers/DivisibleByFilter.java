@@ -1,5 +1,6 @@
 package com.aor.numbers;
 
+
 public class DivisibleByFilter implements GenericListFilter {
     Integer divisor;
     DivisibleByFilter(Integer div) {
