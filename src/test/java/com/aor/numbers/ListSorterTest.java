@@ -23,7 +23,7 @@ public class ListSorterTest {
     public void sort() {
 
         ListSorter sorter = new ListSorter();
-        List<Integer> sorted = sorter.sort(l2);
+        List<Integer> sorted = sorter.sort(list);
 
         Assertions.assertEquals(expected, sorted);
     }
